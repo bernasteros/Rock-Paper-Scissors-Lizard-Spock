@@ -15,12 +15,20 @@ def clear():
 
 
 rock_win = [scissors, lizard]
-paper_win = [spock, paper]
+paper_win = [spock, rock]
 scissors_win = [lizard, paper]
 spock_win = [rock, scissors]
 lizard_win = [paper, spock]
 player_score = 0
 computer_score = 0
+
+winner_dict = {
+  rock:["breaks", "crushes"],
+  paper:["disproves", "covers"],
+  scissors:["slices", "cuts"],
+  spock:["vaporises", "crushes"],
+  lizard:["eats", "poisons"],
+}
 
 gesture = [[rock, rock_win], [paper, paper_win], [scissors, scissors_win],
            [spock, spock_win], [lizard, lizard_win]]
@@ -43,7 +51,18 @@ while (game == "y"):
 
   Your choice: '''))
     clear()
+    
+    player_hand = gesture[player][0]
+    computer_hand = gesture[computer][0]
+    c_loser_list = gesture[player][1]
+    p_loser_list = gesture[computer][1]
 
+    #needs redefinition!!!
+    player_wins = winner_dict[player_hand[gesture.index(gesture[computer][1])]]
+    computer_wins = winner_dict[computer_hand[gesture.index(player_hand)]]
+    
+    
+    print(player_wins)
     if player >= 0 and player <= 4:
         print(f''' You play 
     {gesture[player][0]}''')
@@ -52,9 +71,10 @@ while (game == "y"):
     Computer plays 
     {gesture[computer][0]}''')
         sleep(1)
-        if gesture[player][0] == gesture[computer][0]:
+        if player_hand == computer_hand:
             print("It is a draw!\n")
-        elif gesture[computer][0] in gesture[player][1]:
+        elif computer_hand in c_loser_list:
+            
             print("Player wins!\n")
             player_score += 1
         else:
