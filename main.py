@@ -1,54 +1,19 @@
+from elements import rock, paper, scissors, spock, lizard, logo
 import random
-from os import system
+from os import system, name
 from time import sleep
 
-rock = '''"Rock"
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
+def clear():
+  
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+  
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
-paper = '''"Paper"
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
 
-scissors = '''"Scissors"
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
-spock = ''' "Spock"
-                      _    
-                     | |   
- ___ _ __   ___   ___| | __
-/ __| '_ \ / _ \ / __| |/ /
-\__ \ |_) | (_) | (__|   < 
-|___/ .__/ \___/ \___|_|\_\
-    | |                    
-    |_|      
-'''
-
-lizard = ''' "Lizard"
-              )/_
-             _.--..---"-,--c_
-        \L..'           ._O__)_
-,-.     _.+  _  \..--( / 
-  `\.-''__.-' \ (     \_      
-
-'''
-
-gesture = [rock, paper, scissors, spock, lizard]
 rock_win = [scissors, lizard]
 paper_win = [spock, paper]
 scissors_win = [lizard, paper]
@@ -56,11 +21,13 @@ spock_win = [rock, scissors]
 lizard_win = [paper, spock]
 player_score = 0
 computer_score = 0
-game = "y"
 
 gesture = [[rock, rock_win], [paper, paper_win], [scissors, scissors_win],
            [spock, spock_win], [lizard, lizard_win]]
 
+game = "y"
+
+print(logo)
 print("Welcome to Rock Paper Scissors Lizard Spock")
 
 while (game == "y"):
@@ -74,11 +41,13 @@ while (game == "y"):
   3 = spock
   4 = lizard
 
-  >>>'''))
+  Your choice: '''))
+    clear()
+
     if player >= 0 and player <= 4:
         print(f''' You play 
     {gesture[player][0]}''')
-
+        sleep(1)
         print(f''' 
     Computer plays 
     {gesture[computer][0]}''')
@@ -87,17 +56,18 @@ while (game == "y"):
             print("It is a draw!\n")
         elif gesture[computer][0] in gesture[player][1]:
             print("Player wins!\n")
-            player_score = player_score + 1
+            player_score += 1
         else:
             print("Computer wins!\n")
-            computer_score = computer_score + 1
+            computer_score += 1
     else:
         print("Non existing Choice, Computer wins by default!\n")
-        computer_score = computer_score + 1
+        computer_score += 1
     sleep(1)
     game = input(
-        "Another round?\n 'y' for continue, any other key for quitting\n Answer: ")
-    system('clear')
+        "Another round?\n 'y' for continue, any other key for quitting\n Answer: "
+    )
+    clear()
 print(
-    f"Thank you for playing :)\n Endscore:\n Player Score = {player_score} Points\n Computer Score = {computer_score}"
+    f"Thank you for playing :)\n Endscore:\n Player Score = {player_score} \n Computer Score = {computer_score}"
 )
