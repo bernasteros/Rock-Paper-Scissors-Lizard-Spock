@@ -2,88 +2,10 @@
   "files": {
     "main.py": [
       {
-        "id": "6e35f253-8e1c-4389-ad24-ee88c06ba246",
-        "line": 55,
-        "version": 2547,
-        "index": 1108
-      },
-      {
-        "id": "6acad35f-a64e-449b-8120-3d632c539b04",
-        "line": 56,
-        "version": 2547,
-        "index": 1180
-      },
-      {
-        "id": "fc4bd6a1-2d3d-4e32-8d4a-430b601c2bf2",
-        "line": 57,
-        "version": 2547,
-        "index": 1217
-      },
-      {
-        "id": "1a033bbd-47c7-470c-b43d-4ac3fb791a37",
-        "line": 58,
-        "version": 2547,
-        "index": 1258
-      },
-      {
-        "id": "3861e1cf-0102-4a39-a8d9-fbd92b97be49",
-        "line": 59,
-        "version": 2547,
-        "index": 1296
-      },
-      {
-        "id": "6d96ff2e-c97c-4cbe-8d9e-616e8f4b9130",
-        "line": 60,
-        "version": 2547,
-        "index": 1332
-      },
-      {
-        "id": "145e58ce-5690-4f1a-aead-ce02d31ac022",
-        "line": 61,
-        "version": 2547,
-        "index": 1337
-      },
-      {
-        "id": "f886c259-5836-4d60-a58c-4dd9ee0195ec",
-        "line": 62,
-        "version": 2547,
-        "index": 1338
-      },
-      {
-        "id": "b01bffb1-c0b9-4eb7-95b5-22b64da0e89c",
-        "line": 63,
-        "version": 2547,
-        "index": 1347
-      },
-      {
-        "id": "aa5a5468-44b4-40a8-a565-9b168e38a1ae",
-        "line": 64,
-        "version": 2550,
-        "index": 1419
-      },
-      {
-        "id": "db5095d8-b924-41d6-a159-84d0b36d02e8",
-        "line": 65,
-        "version": 2547,
-        "index": 1501
-      },
-      {
-        "id": "ba479117-487d-4ec1-8e56-63ab14458660",
-        "line": 66,
-        "version": 2547,
-        "index": 1524
-      },
-      {
-        "id": "0b9a7a29-9387-4f3e-bc7f-55be3a7652b4",
-        "line": 67,
-        "version": 2547,
-        "index": 1549
-      },
-      {
         "id": "cad6dd1f-99cc-4eeb-8229-fa5958f4d182",
         "line": 97,
-        "version": 2530,
-        "index": 2415
+        "version": 2552,
+        "index": 2411
       }
     ]
   }
