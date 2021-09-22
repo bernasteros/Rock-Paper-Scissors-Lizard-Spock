@@ -54,11 +54,11 @@ while (game == "y"):
     computer = random.randint(0, 4)
     player = int(
         input('''Please make your Choice:
-  0 = rock
-  1 = paper
-  2 = scissors
-  3 = spock
-  4 = lizard
+  0 = rock 🪨
+  1 = paper 📜
+  2 = scissors ✂️
+  3 = spock 🖖
+  4 = lizard 🐉
 
   Your choice: '''))
     clear()
@@ -87,7 +87,7 @@ while (game == "y"):
                 f"'{element_word[player_hand]} {defeats} {element_word[computer_hand]}'"
             )
 
-            print("Player wins!\n")
+            print("\nPlayer wins!\n")
 
             player_score += 1
 
@@ -98,7 +98,7 @@ while (game == "y"):
                 f"'{element_word[computer_hand]} {defeats} {element_word[player_hand]}'"
             )
 
-            print("Computer wins!\n")
+            print("\nComputer wins!\n")
             computer_score += 1
     else:
         print("Non existing Choice, Computer wins by default!\n")
