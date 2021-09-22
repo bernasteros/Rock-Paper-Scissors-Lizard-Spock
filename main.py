@@ -22,13 +22,13 @@ lizard_win = [paper, spock]
 player_score = 0
 computer_score = 0
 
-winner_dict = {
-  rock:["breaks", "crushes"],
-  paper:["disproves", "covers"],
-  scissors:["slices", "cuts"],
-  spock:["vaporises", "crushes"],
-  lizard:["eats", "poisons"],
-}
+element_win = [ 
+  [rock, ["breaks", "crushes"]],
+  [paper, ["disproves", "covers"]],
+  [scissors, ["slices", "cuts"]],
+  [spock, ["vaporises", "crushes"]],
+  [lizard, ["eats", "poisons"]]
+]
 
 gesture = [[rock, rock_win], [paper, paper_win], [scissors, scissors_win],
            [spock, spock_win], [lizard, lizard_win]]
@@ -52,17 +52,20 @@ while (game == "y"):
   Your choice: '''))
     clear()
     
+    # Simplifying addressing position of choices and winning conditions
     player_hand = gesture[player][0]
     computer_hand = gesture[computer][0]
     c_loser_list = gesture[player][1]
     p_loser_list = gesture[computer][1]
+    
 
-    #needs redefinition!!!
-    player_wins = winner_dict[player_hand[gesture.index(gesture[computer][1])]]
-    computer_wins = winner_dict[computer_hand[gesture.index(player_hand)]]
-    
-    
+
+    player_wins = element_win[player][1][c_loser_list.index(computer_hand)]
+    # computer_wins = element_win[computer][1][p_loser_list.index(player_hand)]
     print(player_wins)
+    # print(computer_wins)
+    break
+
     if player >= 0 and player <= 4:
         print(f''' You play 
     {gesture[player][0]}''')
